@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIS002 - LE PARAVUE — MARTIN GAUFRYAU ARCHITECTE</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e53935'/></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-container">
+    <header class="main-header">
+      <div class="brand">
+        <a href="index.html">MARTIN GAUFRYAU ARCHITECTE</a>
+      </div>
+      <nav class="main-nav">
+        <a href="realisations.html" class="active">RÉALISATIONS</a>
+        <a href="portrait.html">PORTRAIT</a>
+        <a href="mentions-legales.html">MENTIONS LÉGALES</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-detail-grid">
+        <img src="https://picsum.photos/800/600?random=21" class="lightbox-trigger" alt="Visuel 1">
+        <img src="https://picsum.photos/600/800?random=22" class="lightbox-trigger" alt="Visuel 2">
+        <img src="https://picsum.photos/800/500?random=23" class="lightbox-trigger" alt="Visuel 3">
+        <img src="https://picsum.photos/800/600?random=24" class="lightbox-trigger" alt="Visuel 4">
+      </section>
+
+      <section class="project-description">
+        <p><strong>Programme :</strong> Cabane en bois<br>
+        <strong>Surface :</strong> 10 m²<br>
+        <strong>Année :</strong> 2021-2022</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <a href="pdf/ordre-architectes.pdf" target="_blank" rel="noopener noreferrer" class="order-link">
+        Inscrit à l'OA
+      </a>
+    </footer>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close-btn" id="close-btn" aria-label="Fermer">X</button>
+    <button class="lightbox-btn" id="prev-btn" aria-label="Image précédente">&lt;</button>
+    <div class="lightbox-img-container">
+      <img src="" id="lightbox-img" alt="Vue agrandie du projet">
+    </div>
+    <button class="lightbox-btn" id="next-btn" aria-label="Image suivante">&gt;</button>
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const triggers = Array.from(document.querySelectorAll('.lightbox-trigger'));
+    let currentIndex = 0;
+
+    function showImage(index) {
+      if (index < 0) index = triggers.length - 1;
+      if (index >= triggers.length) index = 0;
+      currentIndex = index;
+      lightboxImg.src = triggers[currentIndex].src;
+    }
+
+    triggers.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        showImage(index);
+        lightbox.classList.add('active');
+      });
+    });
+
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showImage(currentIndex - 1);
+    });
+
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showImage(currentIndex + 1);
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox || e.target.classList.contains('lightbox-img-container')) {
+        lightbox.classList.remove('active');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+      if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+      if (e.key === 'Escape') lightbox.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

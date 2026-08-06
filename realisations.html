@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réalisations — MARTIN GAUFRYAU ARCHITECTE</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23e53935'/></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-container">
+    <header class="main-header">
+      <div class="brand">
+        <a href="index.html">MARTIN GAUFRYAU ARCHITECTE</a>
+      </div>
+      <nav class="main-nav">
+        <a href="realisations.html" class="active">RÉALISATIONS</a>
+        <a href="portrait.html">PORTRAIT</a>
+        <a href="mentions-legales.html">MENTIONS LÉGALES</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Grille Photo Projets -->
+      <section class="projects-grid">
+        <article class="project-card">
+          <a href="projet-fom014.html">
+            <img src="images/FOM014/vignette.jpg" alt="FOM014 - EXTENSION ET SURÉLÉVATION">
+            <h2 class="project-title">FOM014 - EXTENSION ET SURÉLÉVATION</h2>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a href="projet-sau012.html">
+            <img src="images/SAU012/vignette.jpg" alt="SAU012 - SALLE DE BAIN">
+            <h2 class="project-title">SAU012 - SALLE DE BAIN</h2>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a href="projet-fac009.html">
+            <img src="images/FAC009/vignette.jpg" alt="FAC009 - FAILLE CACHÉE">
+            <h2 class="project-title">FAC009 - FAILLE CACHÉE</h2>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a href="projet-bis002.html">
+            <img src="images/BIS002/vignette.jpg" alt="BIS002 - LE PARAVUE">
+            <h2 class="project-title">BIS002 - LE PARAVUE</h2>
+          </a>
+        </article>
+      </section>
+
+      <!-- Section Tableau Récapitulatif -->
+      <section class="projects-table-section">
+        <!-- Barre d'outils positionnée en haut à droite -->
+        <div class="table-header-toolbar">
+          <button id="sort-year-btn" class="table-tool-btn" title="Trier par année">
+            TRI PAR ANNÉE <span id="sort-icon">↓</span>
+          </button>
+          <button id="toggle-table-btn" class="table-tool-btn" aria-label="Masquer / Afficher le tableau" title="Replier le tableau">
+            <span id="toggle-icon">−</span>
+          </button>
+        </div>
+
+        <div id="table-wrapper" class="table-wrapper">
+          <table class="projects-table" id="projects-table">
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>N°</th>
+                <th>Année</th>
+                <th>Typologie</th>
+                <th>Localisation</th>
+                <th>Statut</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>COR</td>
+                <td>019</td>
+                <td data-year="2025">2025</td>
+                <td>Logement collectif — Succession de mission</td>
+                <td>Bordeaux (33)</td>
+                <td>Études en cours</td>
+              </tr>
+              <tr>
+                <td>EUR</td>
+                <td>018</td>
+                <td data-year="2025">2025</td>
+                <td>Programme confidentiel</td>
+                <td>La Nive (64)</td>
+                <td>Études en cours</td>
+              </tr>
+              <tr>
+                <td>ALG</td>
+                <td>017</td>
+                <td data-year="2025">2025</td>
+                <td>Cabane — Micro-architecture</td>
+                <td>Faverges-Seythenex (74)</td>
+                <td>Concours</td>
+              </tr>
+              <tr>
+                <td>DIV</td>
+                <td>016</td>
+                <td data-year="2024">2024</td>
+                <td>Logement collectif — Réhabilitation</td>
+                <td>Bergerac (24)</td>
+                <td>En cours de réalisation</td>
+              </tr>
+              <tr>
+                <td>MED</td>
+                <td>015</td>
+                <td data-year="2024">2024</td>
+                <td>Pavillon — Micro-architecture</td>
+                <td>Rome (Italie)</td>
+                <td>Concours</td>
+              </tr>
+              <tr>
+                <td>FOM</td>
+                <td>014</td>
+                <td data-year="2024">2024</td>
+                <td><a href="projet-fom014.html" class="accent-link">Maison individuelle — Extension et surélévation</a></td>
+                <td>Bègles (33)</td>
+                <td>En cours de réalisation</td>
+              </tr>
+              <tr>
+                <td>BIS</td>
+                <td>013</td>
+                <td data-year="2024">2024</td>
+                <td>Cabane — Micro-architecture</td>
+                <td>Saint-Ferréol (74)</td>
+                <td>Concours</td>
+              </tr>
+              <tr>
+                <td>SAU</td>
+                <td>012</td>
+                <td data-year="2024">2024</td>
+                <td><a href="projet-sau012.html" class="accent-link">Salle de bain — Architecture d'intérieur</a></td>
+                <td>Villenave-d'Ornon (33)</td>
+                <td>Réalisé</td>
+              </tr>
+              <tr>
+                <td>MAJ</td>
+                <td>011</td>
+                <td data-year="2023">2023</td>
+                <td>Logement collectif — Réhabilitation</td>
+                <td>Bergerac (24)</td>
+                <td>Réalisé</td>
+              </tr>
+              <tr>
+                <td>EUR</td>
+                <td>010</td>
+                <td data-year="2023">2023</td>
+                <td>Tiers-lieu — Réhabilitation</td>
+                <td>Fleurance (32)</td>
+                <td>Concours</td>
+              </tr>
+              <tr>
+                <td>FAC</td>
+                <td>009</td>
+                <td data-year="2023">2023</td>
+                <td><a href="projet-fac009.html" class="accent-link">Installation — Micro-architecture</a></td>
+                <td>Bourg-Saint-Maurice (73)</td>
+                <td>Concours remporté, réalisé</td>
+              </tr>
+              <tr>
+                <td>VIT</td>
+                <td>008</td>
+                <td data-year="2023">2023</td>
+                <td>Bureaux — Réhabilitation</td>
+                <td>Saint-Émilion (33)</td>
+                <td>Études</td>
+              </tr>
+              <tr>
+                <td>BIS</td>
+                <td>007</td>
+                <td data-year="2023">2023</td>
+                <td>Cabane — Micro-architecture</td>
+                <td>Giez (74)</td>
+                <td>Concours</td>
+              </tr>
+              <tr>
+                <td>DOR</td>
+                <td>006</td>
+                <td data-year="2023">2023</td>
+                <td>Maison individuelle — Construction neuve</td>
+                <td>Montussan (33)</td>
+                <td>Études</td>
+              </tr>
+              <tr>
+                <td>SAC</td>
+                <td>005</td>
+                <td data-year="2022">2022</td>
+                <td>Installation — Micro-architecture</td>
+                <td>Montpellier (34)</td>
+                <td>Concours</td>
+              </tr>
+              <tr>
+                <td>JOL</td>
+                <td>004</td>
+                <td data-year="2022">2022</td>
+                <td>Pavillon mobile — Micro-architecture</td>
+                <td>Paris (75)</td>
+                <td>Concours</td>
+              </tr>
+              <tr>
+                <td>MED</td>
+                <td>003</td>
+                <td data-year="2022">2022</td>
+                <td>Pavillon — Micro-architecture</td>
+                <td>Rome (Italie)</td>
+                <td>Concours</td>
+              </tr>
+              <tr>
+                <td>BIS</td>
+                <td>002</td>
+                <td data-year="2022">2022</td>
+                <td><a href="projet-bis002.html" class="accent-link">Cabane — Micro-architecture</a></td>
+                <td>Saint-Germain-Laval (42)</td>
+                <td>Concours remporté, réalisé</td>
+              </tr>
+              <tr>
+                <td>ENS</td>
+                <td>001</td>
+                <td data-year="2022">2022</td>
+                <td>Patrimoine — Micro-architecture</td>
+                <td>Talence (33)</td>
+                <td>Permis déposé</td>
+              </tr>
+              <tr>
+                <td>PHE</td>
+                <td>000</td>
+                <td data-year="2018">2018</td>
+                <td>Logement — Architecture d'intérieur</td>
+                <td>Aix-en-Provence (13)</td>
+                <td>Réalisé</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <a href="pdf/ordre-architectes.pdf" target="_blank" rel="noopener noreferrer" class="order-link">
+        Inscrit à l'OA
+      </a>
+    </footer>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-table-btn');
+    const toggleIcon = document.getElementById('toggle-icon');
+    const tableWrapper = document.getElementById('table-wrapper');
+
+    toggleBtn.addEventListener('click', () => {
+      tableWrapper.classList.toggle('collapsed');
+      toggleIcon.textContent = tableWrapper.classList.contains('collapsed') ? '+' : '−';
+    });
+
+    const sortBtn = document.getElementById('sort-year-btn');
+    const sortIcon = document.getElementById('sort-icon');
+    const tbody = document.querySelector('#projects-table tbody');
+    let isDescending = true;
+
+    sortBtn.addEventListener('click', () => {
+      const rows = Array.from(tbody.querySelectorAll('tr'));
+      isDescending = !isDescending;
+
+      rows.sort((rowA, rowB) => {
+        const yearA = parseInt(rowA.children[2].getAttribute('data-year'), 10);
+        const yearB = parseInt(rowB.children[2].getAttribute('data-year'), 10);
+        return isDescending ? yearB - yearA : yearA - yearB;
+      });
+
+      rows.forEach(row => tbody.appendChild(row));
+      sortIcon.textContent = isDescending ? '↓' : '↑';
+    });
+  </script>
+</body>
+</html>
